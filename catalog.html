@@ -3,9 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>Барбершоп "Бородинский" Каталог товаров</title>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+        <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
-    <body>
+    <body class="inner-page">
         <header class="main-header">
             <nav class="main-navigation">
                 <a class="main-header-logo" href="index.html">
@@ -38,66 +40,48 @@
                     <fieldset>
                         <legend>Производители</legend>
                         <ul>
-                            <li class="filter-option">
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="baxter-of-california" checked>
-                                    Baxter of California
-                                </label>
-                            </li>
-                            <li class="filter-option">
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="mr-natty">
-                                    Mr Natty
-                                </label>
-                            </li>
-                            <li class="filter-option">
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="suavecito" checked>
-                                    Suavecito
-                                </label>
-                            </li>
-                            <li class="filter-option">
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="malin-goetz">
-                                    Malin+Goetz
-                                </label>
-                            </li>
-                            <li class="filter-option">
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="murrays">
-                                    Murray's
-                                </label>
-                            </li>
-                            <li class="filter-option">
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="american-crew" checked>
-                                    American Crew
-                                </label>
-                            </li>
+                          <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="baxter-of-california" id="filter-baxter-of-california" checked>
+                            <label for="filter-baxter-of-california">Baxter of California</label>
+                          </li>
+                          <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="mr-natty" id="filter-mr-natty">
+                            <label for="filter-mr-natty">Mr Natty</label>
+                          </li>
+                          <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="suavecito" id="filter-suavecito" checked>
+                            <label for="filter-suavecito">Suavecito</label>
+                          </li>
+                          <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="malin-goetz" id="filter-malin-goetz">
+                            <label for="filter-malin-goetz">Malin+Goetz</label>
+                          </li>
+                          <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="murrays" id="filter-murrays" disabled>
+                            <label for="filter-murrays">Murray’s</label>
+                          </li>
+                          <li class="filter-option">
+                            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="american-crew" id="filter-american-crew" checked>
+                            <label for="filter-american-crew">American Crew</label>
+                          </li>
                         </ul>
                     </fieldset>
                     <fieldset>
                         <legend>Группы товаров:</legend>
                         <ul>
                             <li class="filter-option">
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="shave">
-                                    Бритвенные принадлежности
-                                </label>
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="shaving" id="filter-shave">
+                                <label for="filter-shave">Бритвенные принадлежности</label>
                             </li>
                             <li class="filter-option">
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="hair-care" checked>
-                                    Средства для ухода
-                                </label>
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="hair-care" id="filter-care" checked>
+                                <label for="filter-care">Средства для ухода</label>
                             </li>
                             <li class="filter-option">
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="accessories">
-                                    Аксессуары
-                                </label>
+                                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="accessories" id="filter-accessories">
+                                <label for="filter-accessories">Аксессуары</label>
                             </li>
-                        </ul>
+                            </ul>
                     </fieldset>
                     <button type="submit" class="filter-button button">Показать</button>
                 </form>
@@ -115,7 +99,7 @@
                                 <img src="img/item-1.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
                             </p>
                          </a>
-                        <p>
+                        <p class="catalog-item-price">
                             <b>2 900 ₽</b>
                             <a class="button" href="#">Купить</a>
                         </p>
@@ -130,7 +114,7 @@
                                 <img src="img/item-2.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
                             </p>
                         </a>
-                        <p>
+                        <p class="catalog-item-price">
                             <b>750 ₽</b>
                             <a class="button" href="#">Купить</a>
                         </p>
@@ -145,7 +129,7 @@
                                 <img src="img/item-3.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
                             </p>
                         </a>
-                        <p>
+                        <p class="catalog-item-price">
                             <b>290 ₽</b>
                             <a class="button" href="#">Купить</a>
                         </p>
@@ -160,7 +144,7 @@
                                 <img src="img/item-4.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
                             </p>
                          </a>
-                        <p>
+                        <p class="catalog-item-price">
                             <b>500 ₽</b>
                             <a class="button" href="#">Купить</a>
                         </p>
@@ -175,7 +159,7 @@
                                 <img src="img/item-5.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
                             </p>
                         </a>
-                            <p>
+                            <p class="catalog-item-price">
                                 <b>300 ₽</b>
                                 <a class="button" href="#">Купить</a>
                             </p>
@@ -190,7 +174,7 @@
                                     <img src="img/item-6.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
                             </p>
                         </a>
-                            <p>
+                            <p class="catalog-item-price">
                                 <b>3 900 ₽</b>
                                 <a class="button" href="#">Купить</a>
                             </p>
